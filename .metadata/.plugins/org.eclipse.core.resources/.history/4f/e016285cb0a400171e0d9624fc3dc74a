@@ -1,0 +1,4 @@
+public class TipoVeiculoEnum {
+	private int Comum;
+	private int Segurado;
+}

@@ -1,0 +1,23 @@
+import org.primefaces.event.map.ReverseGeocodeEvent;
+
+public class EstadiaMB {
+	private int horas;
+	private int desconto;
+	private TipoVeiculoEnum tipoVeiculo;
+
+	public double getValorDesconto() {
+		if (tipoVeiculo == TipoVeiculoEnum.Segurado) {
+			return (getSubTotal() * desconto) / 100;
+		} else {
+			return "0";
+		}
+	}
+
+	public double getSubTotal() {
+		return 15 + 2 * (horas - 1);
+	}
+
+	public double getTotal() {
+		return getSubTotal() - desconto;
+	}
+}

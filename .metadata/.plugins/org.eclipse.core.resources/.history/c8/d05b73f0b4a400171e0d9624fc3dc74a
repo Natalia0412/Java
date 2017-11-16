@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Estacionamento</title>
+</h:head>
+<h:body>
+<h:outputLabel value="Qtde.Horas:"/>
+<h:inputText value="#{estadiaMB.horas}"/>
+<h:outputLabel value="% Desconto:"/>
+<h:inputText value="#{estadiaMB.desconto}"/>
+<h:outputLabel value="Tipo Veiculo:"/>
+<h:selectOneRadio>
+<f:selectItem itemLabel="Comum"/>
+<f:selectItem itemLabel="Segurado"/>
+</h:selectOneRadio>
+<h:outputLabel value="Sub-total"/>
+<h:outputLabel value="R$"/>
+<h:outputLabel value="Valor Desconto"/>
+<h:outputLabel value="R$"/>
+<h:outputLabel value="Total a pagar"/>
+<h:outputLabel value="R$"/>
+<h:commandButton value="Calcular"/>
+</h:body>
+</html>
